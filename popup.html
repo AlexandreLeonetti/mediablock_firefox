@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/app.css">
+    <style>
+      body { animation: none; min-width: 35em; font-size:1em;}
+      ul.scroll { margin: 0; padding: 0;  max-height: 20em; }
+      li { border-radius: 10px; padding-left: 0.2em; list-style:none; margin-bottom:10px; grid-template-columns: 40px 50px ;}
+      li span { display: inline-block; vertical-align: text-bottom;
+	  }  
+	  .lft{
+		margin-left:20px;
+		font-weight:600;
+	  }
+    button:first-of-type { margin-left: 0; }
+	.info{padding-left: 1.2em;}
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <div class="primePop headerPopup browserPopup">mediaStop</div>
+    <!-- main -->
+    <div class="primePop" style="margin: 0;">
+       <div style="margin-top: 1em; ">
+         <!-- <button type="button" data-i18n="block">block</button>
+          <button type="button" data-i18n="unblock">unblock</button>-->
+          
+			<ul>
+				<li class="a">
+					<span class="lft b">Block Images</span>
+					<label class="switch c">
+					  <input  id="cboxImages" type="checkbox" data-i18n="cboxImages">
+					  <span class="slider round"></span>
+					</label>
+				</li>
+				<li class="a">
+					<span class="lft b">Block Keywords</span>
+					<label class="switch c">
+					  <input id="cboxKeywords" type="checkbox" data-i18n="cboxKeywords">
+					  <span class="slider round"></span>
+					</label>
+				</li>
+
+				<li class="a">
+					<span id = "mediaSwitch"class="lft b">Block Websites</span>
+					<label id="boxMedia" class="switch c">
+					  <input id="cboxMedia" type="checkbox" data-i18n="cboxMedia">
+					  <span id ="sliderMedia" class="slider round"></span>
+					</label>
+				</li>
+			</ul>
+			<button type="button" data-i18n="censor">Block List</button>
+        </div>
+    </div>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/popup.js"></script>
+  </body>
+</html>

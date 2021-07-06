@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title data-i18n="options">mediaStop </title>
+    <link rel="icon" type="image/png" href="/images/icon.svg">
+    <link rel="stylesheet" href="styles/fontawesome-4.6.3.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <style>
+     
+    </style>
+
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="prime header" data-i18n="optionsPage"></div>
+
+
+    <!-- spinner -->
+    <div class="spinner on"><i class="fa fa-refresh fa-spin"></i></div>
+
+    <!-- error -->
+    <div id="error" class="prime hide"><h5 data-i18n="erroNoSettings"></h5></div>
+
+    <!-- main -->
+ <!-- 
+ 	<div class="prime">
+			<div style="display: flex;">
+			<nav>
+			  <div class="keyWordsItems">Subscription </div>
+			</nav>
+			
+			 <div  class="rightColumn">
+			 <div class="addWord">
+			 <div class="main flex wdth90"  >
+				<div className="form-group">
+							  <input id="mediaCode" type="text" class="signupInput"/>
+				</div>
+				 <div style="text-align: right;">
+				<button data-i18n="saveCode" id="saveCode" type="submit">  </button>
+				</div>
+				</div>
+				
+
+			</div>
+			<div >	
+			  <div id="currentCode"  ></div>
+					<br><br>
+					<div>This code grants you access to full functionalities and updates .
+			</div>
+			</div>		
+		  </div>		
+		 </div>
+	</div>-->
+	<script src="scripts/index.js"></script>
+	
+	
+	<!-- block for one week -->
+	<div class="prime">
+		<div style="display: flex;">
+			<nav>
+			  <!--<a data-i18n="add"><i class="fa fa-plus-circle"></i></a>-->
+			  <div class="keyWordsItems">Weekly Block </div>
+			</nav>
+					<!--<div style="text-align: right;">
+						<button data-i18n="weekU" id="weekU" type="submit"> weekU </button>
+					</div>	-->
+		  <div class="rightColumn">
+			<div class="addWord">
+			
+			
+				 <div class="main flex wdth90" id="textOptionsBlock"  >Block all for one week.
+					<div style="text-align: right;">
+						<button data-i18n="weekBlock" id="weekBlock" type="submit">  </button>
+					</div>
+				 </div>
+
+				 <div class="main flex wdth90" id="weekBlocked"  >Currently blocked.
+
+				 </div>					 
+			</div>	
+		  </div>		
+		</div>
+	</div>
+	
+	
+	    <!-- main2 -->
+    <div class="prime">
+      <div style="display: flex;">
+
+        <nav>
+          <!--<a data-i18n="add"><i class="fa fa-plus-circle"></i></a>-->
+		  <div class="keyWordsItems">Keywords</div>
+
+        </nav>
+
+        <div id="rightColumn" class="rightColumn">
+
+							  <!-- word list -->
+
+							  
+							  
+								  <!-- main -->
+				<div class=" addWord">  
+								  <div class="main flex wdth90">
+											<div class="floatLeft">
+												  <input id="wordAddress" type="text" spellcheck="false" placeholder="censored word"><div style="margin-left:10px;">*</div>
+											</div>
+											<div style="text-align: right;">
+											<button type="submit" data-i18n="saveKeyword"><!--<i class="fa fa-plus-circle"></i>--></button>
+										  </div> 
+								  </div>						 
+				</div>
+							  <div id="keywordsDiv" class="wrapper"></div>
+							  
+							  <div id="help" style="text-align: center;margin: 5% auto"> <!-- try to center -->
+								<span data-i18n="noCensoredWords"></span>
+								Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
+							  </div>
+							 <br>
+							  <p style="text-align:justify;">* Keywords in the blocklist are all case sensitive.<br>
+							  Entering "Abc" in the blocklist will NOT block occurences of "ABC".
+							  You have to enter the exact syntax of the words you wish to block.</p>
+							  <!-- template -->
+							  <div class="box template">
+								<div style="text-align: left;" class="">
+									<span class="address "></span>
+									<span class="address "></span>
+									<button type="button" class="plain deleteElt" data-i18n="delete|title"><i class="fa fa-trash"></i></button>
+								</div>
+							  </div>
+        </div>
+      </div>
+    </div>
+	
+  <div class="prime">
+      <div style="display: flex;">
+
+        <nav>
+          <!--<a data-i18n="add"><i class="fa fa-plus-circle"></i></a>-->
+		  <div class="keyWordsItems">Media</div>
+        </nav>
+
+        <div id="rightColumnMedia" class="rightColumn">
+<div id="connError" style="color:red; font-weight:700; padding-bottom:10px;"> </div>
+						  <!-- word list -->
+							  <!-- main -->
+				<div class=" addWord">  
+					
+			
+							  <div class="main flex wdth90">
+										<div class="floatLeft">
+											  <input id="mediaAddress" type="text" spellcheck="false" placeholder="censored word">
+										</div>
+									 <div style="text-align: right;">
+										<button type="submit" data-i18n="saveMedia"><!--<i class="fa fa-plus-circle"></i>--></button>
+									  </div> 
+							  </div>	
+						  
+				</div>
+						  	
+						  <div id="medias" class="wrapper"></div>
+						  
+						  <div id="helpMedia" style="text-align: center;margin: 5% auto"> <!-- try to center -->
+							<span data-i18n="noCensoredWords"></span>
+							Please click <a data-i18n="add" ><i class="fa fa-plus-circle"></i> </a> to start.
+						  </div>
+
+						  <!-- template -->
+						  <div class="box templateMedia">
+							<div style="text-align: left;" class="">
+								<span class="address "></span>
+								<span class="address "></span>
+								<button type="button" class="plain deleteElt" data-i18n="deleteMedia"><i class="fa fa-trash"></i></button>
+							</div>
+						  </div>
+						  <!-- template-week -->
+						  <div class="box weekBlocked templateMediaWeek">
+							<div style="text-align: left;" class="">
+								<span class="address "></span>
+								<span class="address "></span>
+							</div>
+						  </div>
+        </div>
+      </div>
+    </div>
+    <!-- popup -->
+    <div class="popup">
+      <div>
+        <h3></h3>
+        <div></div>
+        <div style="text-align: right;">
+          <button type="button" class="alert" data-i18n="cancel"></button>&nbsp;
+          <button type="submit" data-i18n="ok"></button>
+        </div>
+      </div>
+    </div>
+
+  <script src="scripts/addWord.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/keyWords.js"></script>
+  </body>
+</html>

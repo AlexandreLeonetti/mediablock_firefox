@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1.5",
+  "default_locale": "en",
+  "name": "mediaStop",
+  "description": "Disable all images and block unwanted website for one week.",
+  "icons": { 
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+  "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+	"tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon128.png",
+    "default_title": "mediaStop",
+	"default_popup": "popup.html",
+    "browser_style": true
+  },
+  "web_accessible_resources": [
+	  "pages/blocked.html"
+	]
+}

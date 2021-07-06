@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title data-i18n="options">Blocked </title>
+    <link rel="icon" type="image/png" href="/images/icon.svg">
+    <link rel="stylesheet" href="../styles/fontawesome-4.6.3.css">
+    <link rel="stylesheet" href="../styles/app.css">
+    <style>
+      nav { width: 14em; margin-right: 0.5em; }
+      nav i.fa { margin-right: 0.4em; font-size: 1.6em; }
+      nav a { display: block; padding: 0.2em 0.5em; border-radius: 0 50px 50px 0; cursor: pointer;  }
+      nav a:hover { background-color: #ccccff; }
+      button i.fa { font-size: 1.8em; color: #ccc; }
+      button i.fa:hover { color: #09f; }
+      button[data-i18n="help|title"] { margin-right: 0.5em; }
+      i.fa-lock { color: #ccc; font-size: 1.3em; vertical-align: middle; margin-right: 0.3em; }
+      i.fa.fa-lock.on, i.fa-lock.on:hover { color: #080; }
+
+      .rightColumn { padding: 1em; flex-grow: 1;    border-radius: 5px; }
+      .pxy { opacity: 1; transition: all 0.5s ease-in-out; border: 1px solid #fff; border-radius: 15px; background-color:#0067f8;
+          margin: 0 0.3em 0.2em 0; padding: 0.2em 0.4em; }
+      .pxy.on { box-shadow: 0px 2px 4px rgba(0,0,0,0.6); }
+      .pxy:first-of-type button.up,
+      .pxy:last-of-type button.down { visibility: hidden; }
+      #accounts { max-height: 60vh; }
+      #accounts div:last-of-type { margin: 0; }
+
+      .title, .address { display: inline-block; vertical-align: middle;     overflow: hidden; 
+    white-space: nowrap;font-size: 5em; 
+    font-weight: 600;}
+      .title { width: 6em; margin: 0 0.5em; }
+      .address { color:white; }
+     .blueBlock{padding:10em;}
+
+      .scroll { max-height: 40vh; padding-right: 0.2em; }
+
+      .color{
+        width: 2em;
+        display: inline-block;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        box-shadow: 0px 2px 3px #777;
+        font-size: 0.8em;
+        width: 3em;
+      }
+	  
+
+
+
+.box {
+  
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 100%;
+}
+
+.deleteElt{
+		float:right;
+}
+    </style>
+
+  </head>
+  <body>
+
+    <!-- header -->
+    <div class="prime header" data-i18n="optionsPage"></div>
+
+
+    <!-- spinner -->
+
+    <!-- error -->
+    <div id="error" class="prime hide"><h5 data-i18n="erroNoSettings"></h5></div>
+
+    <!-- main -->
+  
+ 
+	    <!-- main -->
+    <div class="prime">
+      <div style="display: flex;">
+
+
+        <div id="rightColumn" class="rightColumn">
+          <div class="box ">
+            <div  align="center" class="blueBlock">
+				<span class="address ">BLOCKED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup -->
+    <div class="popup">
+      <div>
+        <h3></h3>
+        <div></div>
+        <div style="text-align: right;">
+          <button type="button" class="alert" data-i18n="cancel"></button>&nbsp;
+          <button type="submit" data-i18n="ok"></button>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
